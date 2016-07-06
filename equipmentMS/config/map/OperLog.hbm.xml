@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="OperLog" table="equms_operlog_info">
+		<id name="operLogId" column="operlog_id">
+			<generator class="native" />
+		</id>
+		<property name="operType" column="operlog_type" not-null="true"/>
+		<property name="operLogContent" column="operlog_content" not-null="true"/>
+		<property name="operLogTime" column="operlog_time" not-null="true"/>
+		<property name="operator" column="operator" not-null="true"/>
+        <property name="operLogRemark" column="operlog_remark"/>
+	</class>
+
+</hibernate-mapping>

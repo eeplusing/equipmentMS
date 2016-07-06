@@ -1,0 +1,78 @@
+body {
+	background: #DFE7FE;
+	overflow: hidden;
+}
+
+#all {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#c-menu {
+	margin-top: 5px;
+	width: 100%;
+}
+
+.f_c_menu {
+	height: 36px;
+	border-radius: 18px;
+	background: url("img/ft2.png") no-repeat;
+	cursor: pointer;	
+}
+
+.f_c_menu span {
+	display: block;
+	width: 100px;
+	height: 36px;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bolder;
+	border: 0px solid #F00;
+	clear: none;
+	text-align: center;
+    line-height: 36px;
+	margin: auto;
+}
+
+.s_c_menu {
+	display: none;
+}
+
+.s_c_menu a {
+	display: block;
+	height: 30px;
+	border: 0px solid #F00;
+}
+
+.s_c_menu a:HOVER {
+	text-decoration: none;
+}
+
+.s_c_menu a:HOVER font {
+	color: #EC6513;
+}
+
+.s_c_menu a:FOCUS font {
+	color: #EC6513;
+}
+
+.s_c_menu a font {
+	display: block;
+	width: 100px;
+	height: 30px;
+	color: #5B7888;
+	font-size: 16px;
+	font-weight: bolder;
+	border: 0px solid #F00;
+	text-align: center;
+	margin: auto;
+	line-height: 36px;
+}
+
+.f_ul {
+	margin-bottom: 15px;
+	background: #DFE7FE;
+	border-radius: 18px 18px 5px 5px;
+}

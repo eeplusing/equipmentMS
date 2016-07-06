@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Spacstock" table="equms_spacstock_info">
+		<id name="spacstockId" column="spacstock_id">
+			<generator class="native" />
+		</id>
+		<property name="sparepartNo" column="sparepart_no" not-null="true"/>
+		<property name="sparepartName" column="sparepart_name" not-null="true"/>
+		<property name="spacstockAmount" column="spacstock_amount" not-null="true"/>
+		<property name="spacstockMinamount" column="spacstock_minamount"/>
+	</class>
+
+</hibernate-mapping>

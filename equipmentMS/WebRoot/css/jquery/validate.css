@@ -1,0 +1,15 @@
+.onShow{ 
+	     background:url(image/onShow.gif) no-repeat 0px -4px !important;padding-left:20px;
+	 }
+	 
+.onCorrect{
+	       background:url(image/onCorrect.gif) no-repeat 0px -4px !important;padding-left:20px; 	       
+	      }
+	      
+.onError{
+	      background:#FFF2E9 url(image/onError.gif) no-repeat 0px -4px !important;padding-left:20px;
+	    }
+	    
+.onFocus{
+		  background:#E9F0FF url(image/onFocus.gif) no-repeat 0px -4px !important;padding-left:20px;
+		}

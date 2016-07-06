@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Iodepot" table="equms_iodepot_info">
+		<id name="iodepotId" column="iodepot_id">
+			<generator class="native" />
+		</id>
+		<property name="goodId" column="good_id" not-null="true"/>
+		<property name="typeId" column="type_id" not-null="true"/>
+		<property name="iodepotOpertype" column="iodepot_opertype" not-null="true"/>
+		<property name="iodepotTime" column="iodepot_time" not-null="true"/>
+        <property name="iodepotGetter" column="iodepot_getter"/>
+        <property name="iodepotReturner" column="iodepot_returner"/>
+        <property name="iodepotOperator" column="iodepot_operator" not-null="true"/>
+		<property name="iodepotRemark" column="iodepot_remark"/>
+        <property name="retainField1" column="retain_field1"/>
+        <property name="retainField2" column="retain_field2"/>
+        <property name="retainField3" column="retain_field3"/>
+	</class>
+
+</hibernate-mapping>

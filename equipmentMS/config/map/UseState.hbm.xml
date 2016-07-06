@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="UseState" table="equms_usestate_info">
+		<id name="useStateId" column="usestate_id">
+			<generator class="native" />
+		</id>
+		<property name="useStateName" column="usestate_name" not-null="true"/>
+		<property name="useStateRemark" column="usestate_remark"/>
+	</class>
+
+</hibernate-mapping>

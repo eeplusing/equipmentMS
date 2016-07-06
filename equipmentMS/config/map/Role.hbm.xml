@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Role" table="equms_role_info">
+		<id name="roleId" column="role_id">
+			<generator class="native" />
+		</id>
+		<property name="name" column="name" not-null="true"/>
+		<property name="describe" column="role_describe"/>
+	</class>
+
+</hibernate-mapping>

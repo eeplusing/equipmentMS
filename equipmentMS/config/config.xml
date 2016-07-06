@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- 设备二维码图片保存路径 -->
+    <equdoccodepath>D:/equms/home/decode/equ/</equdoccodepath>
+        
+    <!-- 备品二维码图片保存路径 -->
+    <spartdoccodepath>D:/equms/home/decode/spart/</spartdoccodepath>
+        
+    <!-- 文档上传路径 -->
+    <datumpath>D:/equms/home/datum/</datumpath>
+    
+    <!-- 超级管理员角色ID -->
+    <managerid>1</managerid>
+</config>

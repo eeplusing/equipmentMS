@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Type" table="equms_type_info">
+		<id name="typeId" column="type_id">
+			<generator class="native" />
+		</id>
+		<property name="typeName" column="type_name" not-null="true"/>
+		<property name="parentId" column="parent_type_id" not-null="true"/>
+	</class>
+
+</hibernate-mapping>

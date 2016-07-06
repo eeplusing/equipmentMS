@@ -1,0 +1,11 @@
+/com/
+/config.xml
+/dtd/
+/hibernate.cfg.xml
+/jdbc.properties
+/junit/
+/log4j.properties
+/map/
+/spring-beans.xml
+/struts-user.xml
+/struts.xml

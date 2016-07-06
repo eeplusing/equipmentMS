@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="home_login" class="homeAction" method="login">
+           <result name="success">/WEB-INF/page/home/home.jsp</result>
+           <result name="login">/WEB-INF/page/home/login.jsp</result>
+        </action>
+        <action name="home" class="homeAction" method="index">
+           <result name="success">/WEB-INF/page/home/home.jsp</result>
+        </action>
+        <action name="drop_out" class="homeAction" method="quit">
+           <result name="login">/WEB-INF/page/home/login.jsp</result>
+        </action>
+        <action name="pass_modify" class="homeAction" method="modifyPass"></action>
+        <action name="open_modify" class="homeAction" method="openWin">
+            <result name="open">/WEB-INF/page/home/pass_modify.jsp</result>
+        </action>
+        
+        <action name="main_page" class="homeAction" method="mainPage"/>
+        <action name="account_check" class="homeAction" method="checkUser"/>
+        <action name="account_activate" class="homeAction" method="activate"/>
+        
+        <action name="index_*" class="homeAction" method="{1}">
+            <result name="menu">/WEB-INF/page/home/menu.jsp</result>
+            <result name="main">/WEB-INF/page/home/main.jsp</result>
+        </action>
+    </package>
+</struts>

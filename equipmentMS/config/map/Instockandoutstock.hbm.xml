@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Instockandoutstock" table="equms_instockandoutstock_info">
+		<composite-id>
+	        <key-property name="instockId" column="instock_id"></key-property>
+	        <key-property name="outstockId" column="outstock_id"></key-property>
+	    </composite-id>
+	</class>
+
+</hibernate-mapping>
+

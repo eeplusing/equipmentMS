@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+    <!-- 引入多个配置文件,不需要拦截的请求可以放入其他配置文件内 -->
+    <include file="struts-user.xml"></include>
+    
+    <package name="authority" namespace="/" extends="json-default">
+        <interceptors>
+            <interceptor name="authority" class="com.moutum.equ.interceptot.MyInterceptot"></interceptor>
+            
+            <interceptor-stack name="mydefault">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="authority"/>
+            </interceptor-stack>
+        </interceptors>
+        
+        <!-- 设置默认拦截器 -->
+        <default-interceptor-ref name="mydefault"/>
+        
+        <global-results>
+           <result name="login">/WEB-INF/page/home/login.jsp</result>
+           <result name="no_right">/WEB-INF/page/right/no_right.jsp</result>
+        </global-results>
+        
+        <action name="user_*" class="userAction" method="{1}">
+           <result name="success">/WEB-INF/page/user/user_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+           
+           <result name="open_s">/WEB-INF/page/user/user_save.jsp</result>
+           <result name="open_m">/WEB-INF/page/user/user_modify.jsp</result>
+        </action>
+        
+        <action name="role_*" class="roleAction" method="{1}">
+           <result name="success">/WEB-INF/page/role/role_list.jsp</result>
+            <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="right_*" class="rightAction" method="{1}">
+           <result name="manage">/WEB-INF/page/right/right_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+           <result name="tree">/WEB-INF/page/role/role_right.jsp</result>
+        </action>
+        
+        <action name="type_*" class="typeAction" method="{1}">
+           <result name="manage">/WEB-INF/page/type/type_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="state_*" class="useStateAction" method="{1}">
+           <result name="manage">/WEB-INF/page/state/state_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="equ_*" class="equipmentAction" method="{1}">
+           <result name="manage">/WEB-INF/page/equ/equ_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+           <result name="datum">/WEB-INF/page/equ/rele_datum.jsp</result>
+           <result name="info">/WEB-INF/page/equ/equ_info.jsp</result>
+        </action>
+        
+        <action name="datumType_*" class="datumTypeAction" method="{1}">
+           <result name="manage">/WEB-INF/page/datum/datum_type_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="datumFormat_*" class="datumFormatAction" method="{1}">
+           <result name="manage">/WEB-INF/page/datum/datum_format_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+         <action name="datum_*" class="datumAction" method="{1}">
+           <result name="manage">/WEB-INF/page/datum/datum_list.jsp</result>
+           <result name="open">/WEB-INF/page/datum/upload.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="iostock_*" class="iostockAction" method="{1}">
+           <result name="manage">/WEB-INF/page/iostock/iostock_list.jsp</result>
+        </action>
+        
+        <action name="instock_*" class="instockAction" method="{1}">
+           <result name="open">/WEB-INF/page/instock/instock_save.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="outstock_*" class="outstockAction" method="{1}">
+           <result name="open">/WEB-INF/page/outstock/outstock_save.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+
+        <action name="spacstock_*" class="spacstockAction" method="{1}">
+        <result name="manage">/WEB-INF/page/spacstock/spacstock_list.jsp</result>
+        <result name="alert">/WEB-INF/page/spacstock/spacstock_alert.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="notice_*" class="noticeAction" method="{1}">
+           <result name="success">/WEB-INF/page/notice/notice_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+           <result name="open_s">/WEB-INF/page/notice/notice_save.jsp</result>
+           <result name="open_d">/WEB-INF/page/notice/notice_open.jsp</result>
+        </action>
+        
+        <action name="operlog_*" class="operLogAction" method="{1}">  
+           <result name="success">/WEB-INF/page/operLog/operLog_list.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+        
+        <action name="provide_*" class="provideBillAction" method="{1}">
+           <result name="open_modify_win">/WEB-INF/page/provide/provide_modify.jsp</result>
+           <result name="open_save_win">/WEB-INF/page/provide/provide_add.jsp</result>
+           <result name="list" type="json">
+               <param name="root">result</param>
+           </result>
+        </action>
+    </package>
+</struts>

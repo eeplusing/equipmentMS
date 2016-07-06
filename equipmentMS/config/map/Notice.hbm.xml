@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Notice" table="equms_notice_info">
+		<id name="id" column="notice_id">
+			<generator class="native" />
+		</id>
+		<property name="title" column="title" not-null="true"/>
+		<property name="content" column="content" not-null="true"/>
+		<property name="noticeTime" column="notice_time" not-null="true"/>
+		<property name="publisher" column="publisher" not-null="true"/>
+	</class>
+
+</hibernate-mapping>

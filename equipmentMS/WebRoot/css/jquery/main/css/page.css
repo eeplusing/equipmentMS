@@ -1,0 +1,55 @@
+a:link {font-size: 12px;color: #000;text-decoration: none;}
+
+.top{ height:66px; background:url("../images/topbg.png") repeat-x;}
+.top_main{ width:1000px; margin:0px auto; }
+.top_logo{ width:300px; float:left;}
+.client{width:178px; height:30px; float:right; background:url("../images/clientbg.png") no-repeat;}
+.client ul{  float:right; margin-right:35px;}
+.client li{ float:left;margin-top:5px;}
+.client li span{ padding:0px 3px 0px 3px; height:20px;}
+.client li span img{ vertical-align:bottom;}
+.client li a{ color:#ffffff;}
+
+.menubg{ background:url("../images/menubg.png") repeat-x; }
+.cdhbg{background:url("../images/hbg.png") repeat-x; height:2px;}
+.cdmenubg{background:url("../images/cdmenubg.png") repeat-x; height:36px;}
+
+.glmk{margin-top:20px; border:1px solid #81A7B6;}
+.mktitle,.mktitlegg{ height:32px; background:url("../images/titlebg.png") repeat-x; border-bottom:1px solid #81A7B6;}
+.mktitlegg{ height:41px; background:url("../images/bgdhbj.png") repeat-x;}
+.mktitle span{ line-height:32px; padding:0px 10px; font-size:14px; font-weight:bold; font-family:宋体,Arial;}
+.mktitlegg span{line-height:41px; padding:0px 0px; font-size:16px; font-weight:bold; font-family:宋体,Arial;}
+.mktitlegg span img{ vertical-align:middle;}
+.mktitle li{ float:left; padding:3px 2px;}
+.mktitle li span{padding:0px;}
+.mktitle li span a{ line-height:20px;}
+.mktitle li img{ vertical-align:bottom;}
+.mknl{ padding:10px 20px; font-size:12px; font-family:宋体,Arial;}
+.mknl1{ padding:20px 10px;}
+.mknl input[type="button"] {background:url("../images/bottonbg.png"); border:0px solid; width:85px; padding:0px 5px; height:25px; }
+.mktb{font-size:14px; font-family:宋体,Arial; }
+.mktb td{padding:2px; line-height:20px; font-size:12px;}
+.mktb .tdbt{ font-size:14px;}
+.mktb .btjc{ text-align:right; font-weight:bold; color:Green;}
+
+.mmktb{ padding:2px 2px 2px 2px; font-family:宋体,Arial;}
+.mmktb table{ border-top:1px solid #81A7B6; border-left:1px solid #81A7B6;}
+.mmktb table td{ height:30px; font-size:12px; text-align:center; vertical-align:middle; border-right:1px solid #81A7B6; border-bottom:1px solid #81A7B6;}
+.mmktb .tbth{ height:35px; background:url("../images/tbthbg.png") repeat-x; font-size:14px;}
+.mmktb .tbgg{ height:35px; font-size:14px;}
+
+.pagging{margin-top:10px; font-size:12px; font-family:宋体,Arial; height:25px;}
+.pagging .fyts{ float:left; line-height:25px;}
+.pagging .fytz{ float:right;}
+
+DIV.green-black {padding:3px; MARGIN: 3px; TEXT-ALIGN: center}
+DIV.green-black A { padding:2px 5px;  COLOR: #48b9ef; MARGIN-RIGHT: 2px; text-decoration:none; border:1px solid #81A7B6;}
+DIV.green-black A:hover {BACKGROUND:#d2eaf6; COLOR: #fff; border:1px solid #81A7B6}
+DIV.green-black A:active {BORDER-RIGHT: #aad83e 1px solid; BORDER-TOP: #aad83e 1px solid; BACKGROUND: url(image2.gif) #aad83e; BORDER-LEFT: #aad83e 1px solid; COLOR: #fff; BORDER-BOTTOM: #aad83e 1px solid}
+
+.downbom{background:url("../images/downbg.png") repeat-x; text-align:center; height:32px; line-height:28px; font-family:宋体,Arial;}
+
+.sjleft{ width:550px;  float:right; margin-top:20px;}
+.sjmk{ height:150px; margin-top:20px;}
+.sjmk1{ height:300px; margin-top:20px;}
+.sjright{ width:400px;  float:right; padding-bottom:20px;}

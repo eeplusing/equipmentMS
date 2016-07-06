@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Outstock" table="equms_outstock_info">
+		<id name="outstockId" column="outstock_id">
+			<generator class="native" />
+		</id>
+		<property name="sparepartNo" column="sparepart_no" not-null="true"/>
+		<property name="sparepartName" column="sparepart_name" not-null="true"/>
+		<property name="sparepartModle" column="sparepart_modle"/>
+		<property name="typeId" column="type_id" not-null="true"/>
+        <property name="sparepartUnit" column="sparepart_unit" />
+        <property name="outstockSparepartReceiver" column="outstock_sparepart_receiver"/>
+        <property name="outstockSparepartProvider" column="outstock_sparepart_provider"/>
+        <property name="instockTime" column="instock_time" not-null="true"/>
+        <property name="outstockTime" column="outstock_time" not-null="true"/>
+		<property name="sparepartUseplace" column="sparepart_useplace"/>
+        <property name="outstockAmount" column="outstock_amount"/>
+        <property name="remainAmount" column="remain_amount"/>
+        <property name="outStockComment" column="outstock_comment"/>
+        <property name="inStockComment" column="instock_comment"/>
+	</class>
+
+</hibernate-mapping>

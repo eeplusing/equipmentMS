@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="User" table="equms_user_info">
+		<id name="userId" column="user_id">
+			<generator class="native" />
+		</id>
+		<property name="loginAccount" column="login_account" not-null="true"/>
+		<property name="loginPassword" column="login_password"/>
+		<property name="userName" column="user_name"/>
+		<property name="userPhone" column="user_phone"/>
+        <property name="isActivated" column="is_activated" not-null="true"/>
+        <property name="email" column="email"/>
+        <property name="roleId" column="role_id"/>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="RoleModle" table="equms_role_model">
+	    <!-- 设置联合主键 -->
+	    <!-- 设置联合主键要求JavaBean必须重写equals和hashCode方法：为了唯一确定一条记录以便用来作为持久化对象的标识
+                         要求JavaBean必须实现Serializable接口
+        -->
+	    
+	    <composite-id>
+	        <key-property name="roleId" column="role_id"></key-property>
+	        <key-property name="modleId" column="modle_id"></key-property>
+	    </composite-id>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+.colin-file-ui{
+	display:inline-block;
+	width: 270px;
+	height: 20px;
+	border: 1px solid #0A93D4;
+}
+.colin-file-text{
+	margin: 0px;
+	padding: 0px;
+	width: 220px;
+	height: 20px;
+	font-size: 12px;
+	color:#666;
+	border: none;
+	float: left;
+}
+.colin-file-button{
+	margin: 0px;
+	padding: 0px;
+	width: 50px;
+	height: 20px;
+	font-size: 16px;
+	color:#FFF;
+	background: #FFA250;
+	border: none;
+	float: left;
+}
+.colin-file-authentic{
+	display: none;
+}

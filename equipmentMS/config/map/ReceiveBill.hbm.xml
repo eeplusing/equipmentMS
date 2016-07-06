@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="ReceiveBill" table="equms_receive_bill">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="stationName" column="station_name" not-null="true"/>
+		<property name="amount" column="amount" not-null="true"/>
+		<property name="receiver" column="receiver" not-null="true"/>
+		<property name="provideDate" column="provide_date" not-null="true"/>
+		<property name="remark" column="remark"/>
+	</class>
+
+</hibernate-mapping>

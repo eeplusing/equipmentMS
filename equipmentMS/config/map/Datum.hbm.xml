@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Datum" table="equms_datum_info">
+		<id name="datumId" column="datum_id">
+			<generator class="native" />
+		</id>
+		<property name="datumName" column="datum_name" not-null="true"/>
+		<property name="datumTypeId" column="datumtype_id" not-null="true"/>
+        <property name="datumFormatId" column="datumformat_id" not-null="true"/>
+        <property name="datumPath" column="datum_path" not-null="true"/>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Equipment" table="equms_equipment_info">
+		<id name="equipmentId" column="equipment_id">
+			<generator class="native" />
+		</id>
+		<property name="equipmentNo" column="equipment_no" not-null="true"/>
+		<property name="equipmentName" column="equipment_name" not-null="true"/>
+		<property name="equipmentModle" column="equipment_modle" not-null="true"/>
+		<property name="typeName" column="type_name" not-null="true"/>
+		<property name="equipmentProducer" column="equipment_producer" not-null="true"/>
+		<property name="equipmentSupplier" column="equipment_supplier" not-null="true"/>
+		<property name="equipmentBuyTime" column="equipment_buy_time" not-null="true"/>
+		<property name="equipmentBuyType" column="equipment_buy_type" not-null="true"/>
+		<property name="equipmentRecipient" column="equipment_recipient" not-null="true"/>
+		<property name="equipmentProvider" column="equipment_provider" not-null="true"/>
+		<property name="equipmentDirector" column="equipment_director" not-null="true"/>
+		<property name="useState" column="use_state" not-null="true"/>
+		<property name="equipmentStartDate" column="equipment_start_date"/>
+		<property name="equipmentUseYears" column="equipment_use_years" not-null="true"/>
+		<property name="equipmentMonetaryAmount" column="equipment_monetary_amount" not-null="true"/>
+		<property name="amount" column="amount" not-null="true"/>
+		<property name="surplusAmount" column="surplus_amount"/>
+		<property name="areaCode" column="areaCode" not-null="true"/>
+		<property name="remark" column="remark"/>
+	</class>
+
+</hibernate-mapping>

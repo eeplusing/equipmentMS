@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.moutum.equ.domain">
+
+	<class name="Instock" table="equms_instock_info">
+		<id name="instockId" column="instock_id">
+			<generator class="native" />
+		</id>
+		<property name="sparepartNo" column="sparepart_no" not-null="true"/>
+		<property name="sparepartName" column="sparepart_name" not-null="true"/>
+		<property name="sparepartModle" column="sparepart_modle"/>
+		<property name="typeId" column="type_id" not-null="true"/>
+        <property name="sparepartUnit" column="sparepart_unit" />
+		<property name="sparepartSetplace" column="sparepart_setplace"/>
+        <property name="instockSparepartReceiver" column="instock_sparepart_receiver"/>
+        <property name="instockSparepartProvider" column="instock_sparepart_provider"/>
+        <property name="instockSparepartSupervisor" column="instock_sparepart_supervisor"/>
+        <property name="instockTime" column="instock_time" not-null="true"/>
+        <property name="instockAmount" column="instock_amount" not-null="true"/>
+        <property name="instockComment" column="instock_comment"/>
+	</class>
+
+</hibernate-mapping>

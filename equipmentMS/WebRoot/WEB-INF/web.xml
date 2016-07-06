@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
+  
+  <context-param>
+    <param-name>projectVersion</param-name>
+    <param-value>Version 1.0</param-value>
+  </context-param>
+  <context-param>
+    <param-name>projectName</param-name>
+    <param-value>equipmentMS</param-value>
+  </context-param>
+  
+  <!-- 配置资源 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-beans.xml</param-value>
+  </context-param>
+  
+  <!-- 配置CharacterEncoding，设置字符集 -->  
+  <filter>  
+    <filter-name>characterEncodingFilter</filter-name>  
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+    <init-param>  
+      <param-name>encoding</param-name>  
+      <param-value>UTF-8</param-value>  
+    </init-param>  
+    <init-param>  
+      <param-name>forceEncoding</param-name>  
+      <param-value>true</param-value>  
+    </init-param>  
+  </filter>
+  
+  <filter-mapping>  
+    <filter-name>characterEncodingFilter</filter-name>  
+    <url-pattern>/*</url-pattern>  
+  </filter-mapping>
+  
+  <!-- 配置struts2 -->
+  <filter>
+      <filter-name>struts2</filter-name>
+      <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+      <filter-name>struts2</filter-name>
+      <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 配置spring -->
+  <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <listener>
+      <listener-class>com.moutum.equ.listener.ServletCListener</listener-class>
+  </listener>
+  
+  <!-- 页面session配置 -->  
+  <session-config>  
+      <session-timeout>30</session-timeout>  
+  </session-config>
+  
+  <!-- 错误页面 -->  
+  <error-page>  
+      <error-code>404</error-code>  
+      <location>/error404.html</location>  
+  </error-page>
+</web-app>

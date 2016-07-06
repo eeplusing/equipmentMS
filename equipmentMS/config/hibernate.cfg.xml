@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<!-- 1，数据库连接信息 -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQL5InnoDBDialect
+	</property>
+	
+	<!-- 2，其他配置 -->
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+	<property name="format_sql">false</property>
+
+	<!-- 3，导入映射文件 -->
+	<mapping resource="map/User.hbm.xml" />
+	<mapping resource="map/Right.hbm.xml" />
+	<mapping resource="map/Modle.hbm.xml" />
+	<mapping resource="map/Role.hbm.xml" />
+	<mapping resource="map/RoleModle.hbm.xml" />
+	<mapping resource="map/RoleRight.hbm.xml" />
+	<mapping resource="map/Datum.hbm.xml" />
+	<mapping resource="map/DatumFormat.hbm.xml" />
+	<mapping resource="map/DatumType.hbm.xml" />
+	<mapping resource="map/Equipment.hbm.xml" />
+	<mapping resource="map/Iodepot.hbm.xml" />
+	<mapping resource="map/OperLog.hbm.xml" />
+	<mapping resource="map/ProvideBill.hbm.xml" />
+	<mapping resource="map/ReceiveBill.hbm.xml" />
+	<mapping resource="map/Type.hbm.xml" />
+    <mapping resource="map/UseState.hbm.xml" />
+    <mapping resource="map/EquipmentDatum.hbm.xml" />
+    <mapping resource="map/Notice.hbm.xml" />
+    
+	<mapping resource="map/Instock.hbm.xml" />
+	<mapping resource="map/Outstock.hbm.xml" />
+	<mapping resource="map/Spacstock.hbm.xml" />
+	<mapping resource="map/Instockandoutstock.hbm.xml" />
+    
+</session-factory>
+
+</hibernate-configuration>
